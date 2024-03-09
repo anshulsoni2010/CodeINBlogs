@@ -1,0 +1,134 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+body {
+    background: #010314;
+    overflow-x: hidden; /* Disable horizontal scroll on the body */
+}
+
+.SectionHeading {
+	background: linear-gradient(267deg, #00F0FF 4.01%, #5200FF 57.55%, #FF2DF7 114.97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    font-family: Aldrich;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: inline-block;
+	margin: 25px 0 ;
+}
+
+.SectionHeading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust this value to control the distance of the underline from the text */
+    width: 100%;
+    height: 3px; /* Adjust this value to control the thickness of the underline */
+	border-radius: 50px;
+    background: linear-gradient(267deg, #00F0FF 4.01%, #5200FF 57.55%, #FF2DF7 114.97%);
+}
+
+.scroll {
+    position: relative;
+    display: flex;
+    width: 700px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll div {
+    white-space: nowrap;
+    animation: scroll var(--time) linear infinite;
+    animation-delay: calc(var(--time) * -1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll div span {
+    display: inline-flex;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    animation: shimmer 2s infinite linear;
+}
+
+.scroll div span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, #ffffff1d 50%, transparent 100%);
+    animation: shimmer-gradient 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes shimmer-gradient {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+.scroll div span:hover {
+    background: #6F33EE;
+    cursor: pointer;
+}
+
+.imgBox div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgBox img {
+    max-width: 200px;
+    scale: 0.8;
+}
+
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .scroll {
+        width: 100%;
+    }
+    
+    .imgBox img {
+        max-width: 150px;
+    }
+}
