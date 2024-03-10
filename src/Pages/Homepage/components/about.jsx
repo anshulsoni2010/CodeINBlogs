@@ -13,7 +13,7 @@ const About = () => {
                             Discover a powerful platform and vibrant community dedicated to fostering <b>learning, collaboration, and innovation. Dive into our Learning Hub, explore exclusive blogs, and participate in hands-on coding experiences</b>. Benefit from mentorship, engage in hackathons, and elevate your coding skills. Join us on a journey of growth and discovery at CodeINBlogs!
                         </p>
 
-                        <div className="btn-knowmore"><span>Know More</span></div>
+                       <a href=""> <div className="btn-knowmore"><span>Know More</span></div></a>
                     </div>
                     <div className="img">
                             <img src={AboutIMG} alt="" />

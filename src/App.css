@@ -248,20 +248,21 @@ body {
     letter-spacing: -0.38px;
     width: 238px;
 }
-
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center vertically */
+    align-items: center;
+    /* Center vertically */
 }
 
 .about-section {
-    width: 1079px;
-    height: 502px;
+    width: 80%;
     padding: 0 112px;
     display: flex;
-    justify-content: space-between; /* Horizontally align content and image */
-    align-items: center; /* Vertically center content and image */
+    justify-content: space-between;
+    /* Horizontally align content and image */
+    align-items: center;
+    /* Vertically center content and image */
 }
 
 .about-section .content {
@@ -328,9 +329,63 @@ body {
     padding: 20px 40px;
     font-size: 20px;
     height: 70px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.about-section .img img{
-    width: 160%; /* Adjust the width as needed */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
+.about-section .content .btn-knowmore:hover {
+    background: linear-gradient(267deg, #00eeff2e 4.01%, #5200FF2e 57.55%, #FF2DF72e 114.97%);
+    color: #ffffff;
+}
+
+.about-section .content .btn-knowmore:active {
+    transform: scale(0.95);
+}
+
+.about-section .img {
+    height: 502px;
+}
+
+.about-section .img img {
+    width: 100%;
+    /* Adjust the width as needed */
+    height: 100%;
+    /* Automatically adjust height to maintain aspect ratio */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Change to single column layout */
+        align-items: center; /* Center content horizontally */
+        padding: 0 20px; /* Adjust padding */
+    }
+
+    .about-section .content .content-heading {
+        width: auto; /* Adjust width for variable content */
+        font-size: 28px; /* Decrease font size for smaller screens */
+        line-height: 38px; /* Decrease line height */
+        text-align: center; /* Center text */
+    }
+
+    .about-section .content .content-heading span {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    .about-section .content .about-content {
+        width: auto; /* Adjust width for variable content */
+        font-size: 16px; /* Decrease font size for smaller screens */
+        line-height: 24px; /* Decrease line height */
+        text-align: center; /* Center text */
+    }
+
+    .about-section .content .btn-knowmore {
+        font-size: 16px; /* Decrease font size for smaller screens */
+        padding: 15px 30px; /* Decrease padding */
+        height: auto; /* Allow button height to adjust based on content */
+    }
+
+    .about-section .img {
+        width: 100%; /* Adjust width for smaller screens */
+        margin-top: 20px; /* Add some margin between content and image */
+    }
 }
