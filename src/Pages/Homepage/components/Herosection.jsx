@@ -2,8 +2,8 @@ export default function Herosection() {
   return (
     <>
       <div className="hero-section-container">
-        <div className="hero-content">
-          <div className="hero-section-content">
+        <div className="hero-main-content-container">
+          <div className="hero-section-heading-content">
             <div className="hero-section-join-community-message">
               Join our community of 15,000+ developers now!
             </div>
