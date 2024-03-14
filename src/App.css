@@ -559,11 +559,11 @@ body {
 
 .btn-blog {
   padding: 20px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 
 .btn-started {
-  padding: 1px;
+  padding: 2px;
   background: linear-gradient(98deg, #ff00e5 0%, #7241ff 49.86%, #3e00ff 99.73%);
 }
 
