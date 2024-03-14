@@ -439,6 +439,8 @@ body {
 
 /* Hero Section */
 .hero {
+  border-radius: 0 0 50px 50px;
+
   height: 100vh;
   display: flex;
   justify-content: center;
