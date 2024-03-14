@@ -443,10 +443,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(217.23% 100.08% at 50% 18.33%,
-      rgba(0, 0, 0, 0) 21.67%,
-      #6f33ee 68.6%,
-      #fff 100%);
+  background: radial-gradient(
+    217.23% 100.08% at 50% 18.33%,
+    rgba(0, 0, 0, 0) 21.67%,
+    #6f33ee 68.6%,
+    #fff 100%
+  );
 }
 
 .hero-container {
@@ -498,10 +500,12 @@ body {
 .hero-join {
   border-radius: 99px;
   border: 2px solid rgba(255, 255, 255, 0.411);
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.03) 59.5%,
-      rgba(255, 255, 255, 0.00) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 59.5%,
+    rgba(255, 255, 255, 0.00) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -573,107 +577,27 @@ body {
 @media only screen and (max-width: 768px) {
   .hero {
     height: 80vh;
-    /* Decrease height for smaller screens */
   }
 
   .hero-main {
     margin-top: 5rem;
-    /* Adjust margin for smaller screens */
   }
 
   .hero-join {
     width: 80%;
-    /* Adjust width for smaller screens */
-
     padding: 0px 20px;
-    /* Adjust padding for smaller screens */
   }
 
   .hero-join span {
-    color: #D9D9D9;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 1.2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 39.245px;
-    /* 280.318% */
-    letter-spacing: -0.38px;
+    font-size: 14px;
   }
 
   .hero-para {
-    color: #FFF;
-    text-align: center;
-    font-family: Aldrich;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 15px;
-    /* 187.5% */
-    letter-spacing: 0.72px;
+    font-size: 14px;
+    max-width: 80%;
   }
 
   .hero-powerful {
-
-    margin: 4% auto;
-
-    color: #FFF;
-    text-align: center;
-    font-family: Aldrich;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.7px;
-  }
-
-  .hero-powerful .hero-developers {
-    text-align: center;
-    font-family: Aldrich;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.68px;
-  }
-
-  .btn-hero {
-    display: flex;
-    gap: 10px;
-    margin: 4% auto;
-    justify-content: center;
-  }
-
-  .btn-blog,
-  .btn-started {
-    border-radius: 100px;
-    width: fit-content;
-    display: flex;
-    color: #fff;
-    text-align: center;
-    font-family: "Space Grotesk";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .btn-blog {
-    padding: 10px;
-    border: 1px solid #fff;
-  }
-
-  .btn-started {
-    padding: 1px;
-    background: linear-gradient(98deg, #ff00e5 0%, #7241ff 49.86%, #3e00ff 99.73%);
-  }
-
-  .btn-started div {
-    padding: 10px;
-    border-radius: 100px;
-    background: #0a082b;
+    font-size: 40px;
   }
 }
