@@ -1,36 +1,36 @@
 export default function Herosection() {
   return (
     <>
-      <div className="hero-section-container">
-        <div className="hero-main-content-container">
-          <div className="hero-section-heading-content">
-            <div className="hero-section-join-community-message">
-              Join our community of 15,000+ developers now!
+      <section className="hero">
+        <div className="hero-container">
+          <div className="hero-main">
+            <div className="hero-heading">
+              <div className="hero-join">
+                <span>Join our community of 15,000+ developers now!</span>
+              </div>
+              <div className="hero-powerful">
+                Powerful Platform & Community For <br />
+                <span className="hero-developers">DEVELOPERS</span>
+              </div>
             </div>
-            <div className="hero-section-powerful-message">
-              Powerful Platform & Community For
+            <div className="hero-para-container">
+              <p className="hero-para">
+                Your hub for innovation, collaboration, and endless possibilities!
+                Ignite your passion through insightful blogs, connect with a
+                vibrant tech community, and elevate your skills in thrilling
+                hackathons. Join us, where coding is limitless, and the excitement
+                never fades!
+              </p>
             </div>
-            <h1 className="hero-section-heading-for-developers">DEVELOPERS</h1>
-          </div>
-          <div className="hero-section-para-container">
-            <p className="hero-section-para">
-              {" "}
-              Your hub for innovation, collaboration, and endless possibilities!
-              Ignite your passion through insightful blogs, connect with a
-              vibrant tech community, and elevate your skills in thrilling
-              hackathons. Join us, where coding is limitless, and the excitement
-              never fades!{" "}
-            </p>
-          </div>
-
-          <div className="hero-section-btns">
-            <div className="get-started-container">
-              <button className="hero-section-get-started">Get Started</button>
+            <div className="btn-hero noselect">
+              <div className="btn-blog">Create A Blog</div>
+              <div className="btn-started">
+                <div>Get Started</div>
+              </div>
             </div>
-            <button className="hero-section-explore-now">Explore Now</button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

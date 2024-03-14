@@ -7,7 +7,7 @@ import Navigation from "./common-component/navigation";
 function App() {
   return (
     <>
-     <Navigation/>
+     {/* <Navigation/> */}
       <HomePage />
     </>
   );
