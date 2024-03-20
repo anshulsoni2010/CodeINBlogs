@@ -5,7 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Actor&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Basic&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body {
   background: #010314;
   overflow-x: hidden;
@@ -441,21 +442,18 @@ body {
 .hero {
   border-radius: 0 0 50px 50px;
 
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(
-    217.23% 100.08% at 50% 18.33%,
-    rgba(0, 0, 0, 0) 21.67%,
-    #6f33ee 68.6%,
-    #fff 100%
-  );
+  background: radial-gradient(217.23% 100.08% at 50% 18.33%,
+      rgba(0, 0, 0, 0) 21.67%,
+      #6f33ee 68.6%,
+      #fff 100%);
 }
 
 .hero-container {
   border-radius: 0 0 50px 50px;
-  height: 80vh;
+  height: 848;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -502,12 +500,10 @@ body {
 .hero-join {
   border-radius: 99px;
   border: 2px solid rgba(255, 255, 255, 0.411);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.03) 59.5%,
-    rgba(255, 255, 255, 0.00) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.03) 59.5%,
+      rgba(255, 255, 255, 0.00) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -578,7 +574,7 @@ body {
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
   .hero {
-    height: 80vh;
+    height: 100vh;
   }
 
   .hero-main {
@@ -595,11 +591,210 @@ body {
   }
 
   .hero-para {
-    font-size: 14px;
+    font-size: 10px;
     max-width: 80%;
   }
 
   .hero-powerful {
     font-size: 40px;
+  }
+  .btn-hero {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-join span {
+    font-size: 10px;
+  }
+}
+
+/* Blogs Section */
+.blog-section {
+  background: #000;
+}
+
+.blogs-grids {
+  display: flex;
+  padding: 0px 2px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 47px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.blogs-cards {
+  height: auto; /* Change height to auto for responsiveness */
+  max-width: 350px; /* Set a maximum width */
+  width: 100%; /* Occupy full width of the container */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 10px;
+  border: 0.7px solid #dee3eb;
+  background: linear-gradient(
+    180deg,
+    rgba(51, 55, 82, 0.2) 0%,
+    rgba(0, 78, 255, 0.2) 99.99%,
+    rgba(0, 78, 255, 0.2) 100%
+  );
+}
+
+.blogs-card-img img {
+  border-radius: 10px;
+  width: 100%; /* Make image responsive */
+}
+
+.blogs-card-main {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  align-self: stretch;
+}
+
+.blogs-card-main .blogs-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.blogs-card-main .blogs-card-content .blogs-card-contenthead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.blogs-card-main .blogs-card-content .blogs-card-contenthead .blogs-card-category_time {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  align-self: stretch;
+}
+
+.blogs-card-main .blogs-card-content .blogs-card-contenthead .blogs-card-category_time .blog-category {
+  color: #f0f4ff;
+  font-family: "Source Code Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.blogs-card-main .blogs-card-content .blogs-card-contenthead .blogs-card-category_time .category-time {
+  display: flex;
+  padding: 3px 6px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 6px;
+  background: #495367;
+}
+
+.blogs-card-main .blogs-card-content .blogs-card-contenthead .blogs-card-category_time .category-time span {
+  color: #ebeef2;
+  font-family: "Source Code Pro";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+}
+
+.blogs-card-main .blogs-card-content .blogs-card-contenthead .blog-title {
+  color: #457eff;
+  font-family: Arvo;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  /* 130.769% */
+  letter-spacing: 0.52px;
+  align-self: stretch;
+}
+
+.blogs-card-main .blogs-card-content .blog-card-discription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.blogs-card-main .blogs-card-content .blog-card-discription p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  align-self: stretch;
+  line-height: 28px;
+  /* 175% */
+  letter-spacing: 0.16px;
+}
+
+.blogs-card-main .blog-card-divider {
+  width: 318px;
+  height: 0.7px;
+  color: #ecf0f6;
+}
+
+.blogs-card-main .article-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center; /* Add this line */
+}
+
+.blogs-card-main .article-author .blog-author-img {
+  width: 45px;
+  height: 45px;
+}
+
+.blogs-card-main .article-author .blog-author-img img {
+  border-radius: 100px;
+}
+
+.blogs-card-main .article-author .author-name_blog-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.blogs-card-main .article-author .author-name {
+  color: #c8d2e6;
+  font-family: "Source Code Pro";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.68px;
+}
+
+.blogs-card-main .article-author .publish-date {
+  color: #c8d2e6;
+  font-family: "Source Code Pro";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.68px;
+}
+
+/* Media Query for responsiveness */
+@media only screen and (max-width: 768px) {
+  .blogs-grids {
+    gap: 20px; /* Adjust gap for smaller screens */
   }
 }

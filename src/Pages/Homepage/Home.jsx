@@ -5,6 +5,8 @@ import Footer from "./components/footer.jsx";
 import BenefitsCards from "./components/benefits.jsx";
 import About from "./components/about.jsx";
 import Herosection from "./components/Herosection.jsx";
+import Testimonials from "./components/testimonials.jsx"
+import BlogSection from "./components/blogs.jsx";
 const HomePage = () => {
   return (
     <>
@@ -14,6 +16,8 @@ const HomePage = () => {
       <BenefitsCards></BenefitsCards>
       <Footer></Footer>
       <About></About>
+      <BlogSection></BlogSection>
+      <Testimonials></Testimonials>
     </>
   );
 };

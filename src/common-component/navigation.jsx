@@ -1,49 +1,47 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import "../styles/navigation.css";
 
 const Navigation = () => {
-    const navRef = useRef();
-
-    const handleMouseEnter = (event) => {
-        const underline = document.createElement('div');
-        underline.classList.add('underline');
-        underline.style.backgroundColor = getComputedStyle(event.target).getPropertyValue('color');
-        event.target.appendChild(underline);
-    };
-
-    const handleMouseLeave = (event) => {
-        const underline = event.target.querySelector('.underline');
-        if (underline) {
-            event.target.removeChild(underline);
-        }
-    };
-
-    const showNav = () => {
-        navRef.current.classList.toggle('responsive-nav');
-    };
-
-    return (
-        <div className='nav'>
-            <div className="nav-logo">
-                <img src="logo.png" alt="" />
+  return (
+    <section>
+      <section id="top-navbar" className="mobile">
+        <div className="pt-6 px-6 container is-fullhd">
+          <div className="px-6 color--bg--item radius--default top-bar columns is-mobile is-gapless">
+            <div className="column is-flex is-flex-wrap-nowrap is-flex-direction-row is-align-items-center">
+              <button id="nav" name="Open sidebar" title="Open sidebar" type="button" className="mr-4 is-flex is-hidden-tablet">
+                <span className="icon hwsize-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M0 0h24v24H0z" stroke="none"></path>
+                    <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                    <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                    <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                    <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                  </svg>
+                </span>
+              </button>
+              <div className="is-flex is-align-items-center">
+                <a href="/" aria-current="page" name="Home" target="_self" className="row items-center no-wrap justify-start cursor-pointer color--default home router-link-exact-active router-link-active">
+                  <div className="logo is-flex-shrink-0 pr-4-desktop pr-3-tablet pr-2-mobile">
+                    <img src="/files/697/zuKqnyzNoIoLXmIVBrn1dORc4tw/f7gkVAnGJC449_dh4FTUtVHYI1KhkSShOdk1eSXlLkeCM3nnofSxtuIJXOWc/c3logo4.png" title="C3" alt="" />
+                  </div>
+                  <span className="has-text-weight-semibold text-size--18 is-size-3-mobile">
+                    C3
+                  </span>
+                </a>
+              </div>
             </div>
-            <div className="nav-elements" ref={navRef}>
-                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Home</span>
-                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Blogs</span>
-                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Events</span>
-                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>About Us</span>
-                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Resources</span>
-                <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Products</span>
+            <div className="column is-flex is-justify-content-center is-narrow">
+              <div className="row col-auto no-wrap items-center justify-end">
+                <button type="button" name="Login" className="primary has-text-weight-semibold right button--style" data-v-2f6f0ef7>
+                  Login
+                </button>
+              </div>
             </div>
-
-            <div className="btn">
-                <button>Sign Up</button>
-            </div>
-            <div>
-                <img src="burger.svg" className='nav-btn  nav-close' onClick={showNav} width={50} />
-            </div>
+          </div>
         </div>
-    );
+      </section>
+    </section>
+  );
 };
 
 export default Navigation;
